@@ -34,6 +34,7 @@ section {
     margin: 10px;
     background: #fff;
     border-radius: 5px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
 }
 
 .project {
@@ -48,4 +49,17 @@ footer {
     position: fixed;
     width: 100%;
     bottom: 0;
+}
+
+@media (max-width: 768px) {
+    nav ul {
+        display: flex;
+        flex-direction: column;
+    }
+    nav ul li {
+        margin: 10px 0;
+    }
+    footer {
+        position: static;
+    }
 }
