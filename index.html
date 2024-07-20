@@ -13,6 +13,44 @@
         html {
             scroll-behavior: smooth;
         }
+        /* Netflix Style Hero Section */
+        .hero {
+            background: url('https://path/to/your-background-image.jpg') no-repeat center center/cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+            position: relative;
+        }
+        .hero::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.6); /* Dark overlay */
+            z-index: 1;
+        }
+        .hero-content {
+            position: relative;
+            z-index: 2;
+        }
+        .hero h1 {
+            font-size: 4em;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+        .hero p {
+            font-size: 1.5em;
+            margin-bottom: 40px;
+        }
+        .hero .btn {
+            font-size: 1.2em;
+            padding: 10px 20px;
+        }
         /* Animation Classes */
         .fade-in {
             opacity: 0;
@@ -52,44 +90,12 @@
                 transform: translateY(0);
             }
         }
-        /* Hero Section */
-        .hero {
-            background: url('path/to/your-image.jpg') no-repeat center center/cover;
-            color: white;
-            height: 100vh;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            text-align: center;
-        }
-        .hero h1 {
-            font-size: 4em;
-        }
         .card {
             border: none;
             transition: transform 0.2s;
         }
         .card:hover {
             transform: scale(1.05);
-        }
-        /* Dark Mode */
-        .dark-mode {
-            background-color: #121212;
-            color: #ffffff;
-        }
-        .dark-mode a {
-            color: #bb86fc;
-        }
-        .toggle-dark-mode {
-            position: fixed;
-            bottom: 1rem;
-            right: 1rem;
-            background: #121212;
-            color: #ffffff;
-            border: none;
-            padding: 0.5rem 1rem;
-            border-radius: 25px;
-            cursor: pointer;
         }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
@@ -101,11 +107,11 @@
     </script>
 </head>
 <body>
-    <!-- Hero Section -->
+    <!-- Netflix Style Hero Section -->
     <header class="hero">
-        <div>
-            <h1 class="fade-in">Ravi Teja's Portfolio</h1>
-            <p class="fade-in-up">Software Engineer with a passion for developing scalable and maintainable software solutions.</p>
+        <div class="hero-content">
+            <h1 class="fade-in">Ravi Teja</h1>
+            <p class="fade-in-up">Software Engineer</p>
             <a href="#portfolio" class="btn btn-light btn-lg fade-in-up">Explore</a>
         </div>
     </header>
@@ -171,6 +177,4 @@
                         <li>Designed and established an Azure DevOps CI/CD workflow for application to ensure efficient deployment.</li>
                         <li>Developed multiple reusable components in Angular and React reducing code duplication and ensuring consistency.</li>
                         <li>Implemented Spring MVC using Spring Controller, resulting in a 25% improvement in request handling and response time.</li>
-                        <li>Conducted code reviews adhering to clean coding standards and applied SOLID design principles and appropriate design patterns to enhance code quality, maintainability, and extensibility.</li>
-                        <li>Used Spring JPA for communicating with MySQL and PostgreSQL databases through Docker.</li>
-                        <li>Designed and implemented a robust data ingestion pipeline that interfaces and ingests data from external sources outside
+                        <li>Conducted code reviews adhering to clean coding standards
