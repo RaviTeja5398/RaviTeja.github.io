@@ -32,6 +32,26 @@
                 transform: translateX(0);
             }
         }
+        .slide-in-right {
+            transform: translateX(100%);
+            animation: slideInRight 1s forwards;
+        }
+        @keyframes slideInRight {
+            to {
+                transform: translateX(0);
+            }
+        }
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 2s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
         /* Hero Section */
         .hero {
             background: url('path/to/your-image.jpg') no-repeat center center/cover;
@@ -84,9 +104,8 @@
     <!-- Hero Section -->
     <header class="hero">
         <div>
-            <h1 class="fade-in">Welcome to My Portfolio</h1>
-            <p class="fade-in">I'm Ravi Teja, a Software Engineer.</p>
-            <a href="#portfolio" class="btn btn-light btn-lg fade-in">Enter</a>
+            <h1 class="fade-in">Ravi Teja's Portfolio</h1>
+            <p class="fade-in-up">Software Engineer with a passion for developing scalable and maintainable software solutions.</p>
         </div>
     </header>
 
@@ -113,11 +132,11 @@
             </div>
         </nav>
         <main class="container mt-4">
-            <section id="about" class="mb-4 slide-in">
+            <section id="about" class="mb-4 fade-in-up">
                 <h2>About Me</h2>
                 <p>Software Engineer with around 4 years of experience in developing scalable and maintainable software. Proven ability to deliver high-quality solutions that align with business goals and improve user experience. Adept at learning and implementing new technologies to solve complex problems effectively.</p>
             </section>
-            <section id="skills" class="mb-4 fade-in">
+            <section id="skills" class="mb-4 slide-in-right">
                 <h2>Skills and Strengths</h2>
                 <ul>
                     <li><strong>Programming / Scripting Languages:</strong> Java, JavaScript, Python</li>
@@ -130,35 +149,4 @@
                     <li><strong>Others:</strong> Microservices, JUnit, Mockito, Postman, Maven, Gradle, Selenium, XML, Data Structures & Algorithms, object-oriented design, distributed Systems</li>
                 </ul>
             </section>
-            <section id="experience" class="mb-4 slide-in">
-                <h2>Experience</h2>
-                <div class="job mb-3">
-                    <h3>Full Stack Java Developer - Forty-Niner, Long Beach, CA</h3>
-                    <p><em>September 2022 – May 2024</em></p>
-                    <ul>
-                        <li>Led the development and ongoing maintenance of the Forty-Niner web portal and successfully executed a migration process, upgrading the app to the latest versions of Angular 14 to 16 utilizing functional components.</li>
-                        <li>Built and deployed a lightweight web application using Angular and Spring which made organizational tasks easy and significantly improved productivity by 25%.</li>
-                        <li>Automated the entire process of payment transfer using Spring achieving a remarkable 90% reduction in overall processing time and increased the productivity of program coordinators.</li>
-                        <li>Conducted a comprehensive re-design of PostgreSQL and Oracle database schema to facilitate easy comprehension for new developers joining the project.</li>
-                        <li>Refactored the codebase, adhering to SOLID design principles to enhance maintainability and decomposed the monolithic app into multiple microservices promoting modularity and scalability.</li>
-                    </ul>
-                </div>
-                <div class="job mb-3">
-                    <h3>Software Engineer - Accenture, Hyderabad, India</h3>
-                    <p><em>January 2021 – October 2021</em></p>
-                    <ul>
-                        <li>Delivered RESTful Web APIs using Spring Boot, Spring framework. Utilized Microservices architecture, employing an API Gateway to manage and coordinate the overall architecture.</li>
-                        <li>Designed and established an Azure DevOps CI/CD workflow for application to ensure efficient deployment.</li>
-                        <li>Developed multiple reusable components in Angular and React reducing code duplication and ensuring consistency.</li>
-                        <li>Implemented Spring MVC using Spring Controller, resulting in a 25% improvement in request handling and response time.</li>
-                        <li>Conducted code reviews adhering to clean coding standards and applied SOLID design principles and appropriate design patterns to enhance code quality, maintainability, and extensibility.</li>
-                        <li>Used Spring JPA for communicating with MySQL and PostgreSQL databases through Docker.</li>
-                        <li>Designed and implemented a robust data ingestion pipeline that interfaces and ingests data from external sources outside the organization and ensured seamless and efficient integration.</li>
-                        <li>Used CLI to drive all microservices builds out to the Docker Image and then deployed to Kubernetes Pods and managed using Kubernetes for Auto-Scaling and Load Balancing by configuring YAML file.</li>
-                    </ul>
-                </div>
-                <div class="job mb-3">
-                    <h3>Associate Software Engineer - FI, Hyderabad, India</h3>
-                    <p><em>June 2020 – December 2020</em></p>
-                    <ul>
-                        <li>Employed automation techniques to optimize and streamline financial processing operations, resulting in a remarkable 80% decrease
+            <section id="experience" class="mb-4 slide-
