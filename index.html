@@ -7,6 +7,31 @@
     <meta name="description" content="Portfolio of Ravi Teja, a software engineer with 4 years of experience in developing scalable and maintainable software.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <style>
+        /* Smooth Scrolling */
+        html {
+            scroll-behavior: smooth;
+        }
+        /* Animation Classes */
+        .fade-in {
+            opacity: 0;
+            animation: fadeIn 2s forwards;
+        }
+        @keyframes fadeIn {
+            to {
+                opacity: 1;
+            }
+        }
+        .slide-in {
+            transform: translateX(-100%);
+            animation: slideIn 1s forwards;
+        }
+        @keyframes slideIn {
+            to {
+                transform: translateX(0);
+            }
+        }
+    </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -17,7 +42,7 @@
 </head>
 <body>
     <header class="bg-dark text-white text-center p-3 mb-4">
-        <h1>Welcome to My Portfolio</h1>
+        <h1 class="fade-in">Welcome to My Portfolio</h1>
         <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
             <div class="container">
                 <a class="navbar-brand" href="#">Ravi Teja</a>
@@ -41,11 +66,11 @@
         </nav>
     </header>
     <main class="container">
-        <section id="about" class="mb-4">
+        <section id="about" class="mb-4 slide-in">
             <h2>About Me</h2>
             <p>Software Engineer with around 4 years of experience in developing scalable and maintainable software. Proven ability to deliver high-quality solutions that align with business goals and improve user experience. Adept at learning and implementing new technologies to solve complex problems effectively.</p>
         </section>
-        <section id="skills" class="mb-4">
+        <section id="skills" class="mb-4 fade-in">
             <h2>Skills and Strengths</h2>
             <ul>
                 <li><strong>Programming / Scripting Languages:</strong> Java, JavaScript, Python</li>
@@ -58,7 +83,7 @@
                 <li><strong>Others:</strong> Microservices, JUnit, Mockito, Postman, Maven, Gradle, Selenium, XML, Data Structures & Algorithms, object-oriented design, distributed Systems</li>
             </ul>
         </section>
-        <section id="experience" class="mb-4">
+        <section id="experience" class="mb-4 slide-in">
             <h2>Experience</h2>
             <div class="job mb-3">
                 <h3>Full Stack Java Developer - Forty-Niner, Long Beach, CA</h3>
@@ -101,12 +126,4 @@
                 <p><em>January 2020 – May 2020</em></p>
                 <ul>
                     <li>Developed front-end UI design implementations by writing HTML5, CSS3, and TypeScript to make better Single Page Applications (SPA) working on Angular.</li>
-                    <li>Participated in coding Spring components for logging, exception handling, and transactional model to handle many requests.</li>
-                </ul>
-            </div>
-        </section>
-        <section id="projects" class="mb-4">
-            <h2>Projects</h2>
-            <div class="project mb-3">
-                <h3>Project 1: Title</h3>
-                <img src="path/to/project1-screenshot.jpg" alt="Project 1 Screenshot" class="img-fluid mb-2">
+                    <li>Participated in coding Spring components for logging, exception handling
