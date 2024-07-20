@@ -7,6 +7,7 @@
     <meta name="description" content="Portfolio of Ravi Teja, a software engineer with 4 years of experience in developing scalable and maintainable software.">
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <style>
         /* Smooth Scrolling */
         html {
@@ -31,6 +32,45 @@
                 transform: translateX(0);
             }
         }
+        /* Hero Section */
+        .hero {
+            background: url('path/to/your-image.jpg') no-repeat center center/cover;
+            color: white;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 4em;
+        }
+        .card {
+            border: none;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: scale(1.05);
+        }
+        /* Dark Mode */
+        .dark-mode {
+            background-color: #121212;
+            color: #ffffff;
+        }
+        .dark-mode a {
+            color: #bb86fc;
+        }
+        .toggle-dark-mode {
+            position: fixed;
+            bottom: 1rem;
+            right: 1rem;
+            background: #121212;
+            color: #ffffff;
+            border: none;
+            padding: 0.5rem 1rem;
+            border-radius: 25px;
+            cursor: pointer;
+        }
     </style>
     <script async src="https://www.googletagmanager.com/gtag/js?id=YOUR_TRACKING_ID"></script>
     <script>
@@ -41,31 +81,35 @@
     </script>
 </head>
 <body>
-    <header class="bg-dark text-white text-center p-3 mb-4">
-        <h1 class="fade-in">Welcome to My Portfolio</h1>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-            <div class="container">
-                <a class="navbar-brand" href="#">Ravi Teja</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav ml-auto">
-                        <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                        <li class="nav-item"><a class="nav-link" href="resume.pdf" target="_blank">Resume</a></li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
+    <header class="hero">
+        <div>
+            <h1 class="fade-in">Welcome to My Portfolio</h1>
+            <p class="fade-in">I'm Ravi Teja, a Software Engineer.</p>
+            <a href="#about" class="btn btn-light btn-lg fade-in">Learn More</a>
+        </div>
     </header>
-    <main class="container">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="#">Ravi Teja</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#testimonials">Testimonials</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#education">Education</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                    <li class="nav-item"><a class="nav-link" href="resume.pdf" target="_blank">Resume</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <main class="container mt-4">
         <section id="about" class="mb-4 slide-in">
             <h2>About Me</h2>
             <p>Software Engineer with around 4 years of experience in developing scalable and maintainable software. Proven ability to deliver high-quality solutions that align with business goals and improve user experience. Adept at learning and implementing new technologies to solve complex problems effectively.</p>
@@ -100,30 +144,4 @@
                 <h3>Software Engineer - Accenture, Hyderabad, India</h3>
                 <p><em>January 2021 – October 2021</em></p>
                 <ul>
-                    <li>Delivered RESTful Web APIs using Spring Boot, Spring framework. Utilized Microservices architecture, employing an API Gateway to manage and coordinate the overall architecture.</li>
-                    <li>Designed and established an Azure DevOps CI/CD workflow for application to ensure efficient deployment.</li>
-                    <li>Developed multiple reusable components in Angular and React reducing code duplication and ensuring consistency.</li>
-                    <li>Implemented Spring MVC using Spring Controller, resulting in a 25% improvement in request handling and response time.</li>
-                    <li>Conducted code reviews adhering to clean coding standards and applied SOLID design principles and appropriate design patterns to enhance code quality, maintainability, and extensibility.</li>
-                    <li>Used Spring JPA for communicating with MySQL and PostgreSQL databases through Docker.</li>
-                    <li>Designed and implemented a robust data ingestion pipeline that interfaces and ingests data from external sources outside the organization and ensured seamless and efficient integration.</li>
-                    <li>Used CLI to drive all microservices builds out to the Docker Image and then deployed to Kubernetes Pods and managed using Kubernetes for Auto-Scaling and Load Balancing by configuring YAML file.</li>
-                </ul>
-            </div>
-            <div class="job mb-3">
-                <h3>Associate Software Engineer - FI, Hyderabad, India</h3>
-                <p><em>June 2020 – December 2020</em></p>
-                <ul>
-                    <li>Employed automation techniques to optimize and streamline financial processing operations, resulting in a remarkable 80% decrease in the time required to complete the insurance processing.</li>
-                    <li>Reshaped Angular components into a reusable NPM package by developing loosely coupled components, improving modularity and reusability across projects.</li>
-                    <li>Implemented Microservices architecture for the creation of independent components utilizing Spring Boot for consuming RESTful services.</li>
-                    <li>Implemented Spring Security using Spring JWT to securely communicate JSON objects.</li>
-                    <li>Incorporated Test-Driven Development (TDD) best practices into code along with unit testing and integration testing (Selenium) to ensure functional correctness.</li>
-                </ul>
-            </div>
-            <div class="job mb-3">
-                <h3>Java Developer Intern - FI, Hyderabad, India</h3>
-                <p><em>January 2020 – May 2020</em></p>
-                <ul>
-                    <li>Developed front-end UI design implementations by writing HTML5, CSS3, and TypeScript to make better Single Page Applications (SPA) working on Angular.</li>
-                    <li>Participated in coding Spring components for logging, exception handling
+                    <li>Delivered RESTful Web APIs using Spring Boot, Spring framework. Utilized Microservices architecture, employing an API Gateway to manage and coordinate the
